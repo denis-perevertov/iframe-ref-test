@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>IFRAME</h1>
-    <iframe src="iframe2.html" frameborder="0"></iframe>
+    <iframe src="iframe2.html" sandbox="allow-scripts"></iframe>
     <h3 id="test"></h3>
 </body>
 
 <script>
+console.log('IFRAME1 document location: ', document.location);
 console.log('IFRAME1 location ancestor origins: ', location.ancestorOrigins);
 console.log('IFRAME1 referrer: ', document.referrer);
 </script>
