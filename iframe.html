@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>IFRAME</h1>
-    <iframe src="iframe2.html" sandbox="allow-scripts"></iframe>
+    <iframe src="about:blank" srcdoc='<h1>srcdoc</h1><script>console.log("HELLO!"); console.log("srcdoc location: ", document.location); console.log("srcdoc ancestorOrigins: ", document.location.ancestorOrigins)</script>'></iframe>
     <h3 id="test"></h3>
 </body>
 
@@ -16,6 +16,11 @@
 console.log('IFRAME1 document location: ', document.location);
 console.log('IFRAME1 location ancestor origins: ', location.ancestorOrigins);
 console.log('IFRAME1 referrer: ', document.referrer);
+
+document.open();
+document.write("<h1>text added by document.write</h1>");
+document.close();
 </script>
+
 
 </html>
